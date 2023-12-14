@@ -1,0 +1,128 @@
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+  .formulario input {
+    width: 100%; /* Ajustar el ancho del input al 100% para pantallas pequeñas */
+  }
+
+  .container {
+    border: 3px solid rgb(0, 38, 250); /* Reducir el grosor del borde para pantallas pequeñas */
+  }
+
+  table {
+    width: 100%; /* Ajustar el ancho de la tabla al 100% para pantallas pequeñas */
+    max-width: none; /* Quitar la restricción máxima del ancho */
+  }
+
+  .logo {
+    max-width: 100%; /* Hacer que la imagen del logo sea completamente adaptable */
+  }
+
+  .boton {
+    position: static; /* Quitar la posición fija en pantallas pequeñas */
+    top: auto;
+    right: auto;
+    width: 100%; /* Ajustar el ancho al 100% para ocupar toda la pantalla */
+    max-width: none; /* Quitar la restricción máxima del ancho */
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.h3{
+  color: black;
+}
+
+.container {
+  
+  background-image: url(Imagen\ de\ WhatsApp\ 2023-12-09\ a\ las\ 00.06.51_123390ce.jpg);
+  border: 5px solid rgb(0, 38, 250);
+  color: black;
+  box-shadow: 5px 5px 10px #000;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgb(255, 82, 0);
+  background-color: #fff;
+  max-height: 400px;
+  max-width: 690px;
+  overflow-y: auto;
+  display: block;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.boton {
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  display: inline-block;
+  color: #FFF;
+  background: #7F8C8D;
+  padding: 7px 20px;
+  white-space: nowrap;
+  border-radius: 100px;
+  margin: 10px 5px;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.azul {
+  background: rgb(0, 38, 250);
+  box-shadow: 0px 5px 0px 0px rgb(0, 38, 250);
+}
+
+.azul:hover {
+  background: rgb(0, 38, 250);
+}
+
+.azul:active {
+  box-shadow: 0px 2px 0px 0px rgb(0, 38, 250);
+}
+.metricas {
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  display: inline-block;
+  color: #FFF;
+  background: rgb(255, 82, 0);
+  padding: 7px 20px;
+  white-space: nowrap;
+  border-radius: 100px;
+  margin: 70px 20px;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.btn{
+  background: rgb(255, 82, 0);
+}
+.btn:hover {
+  background: rgb(255, 82, 0);
+}

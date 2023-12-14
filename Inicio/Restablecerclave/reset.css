@@ -1,0 +1,53 @@
+body {
+    background-color: #E0E0E0; /* Color de fondo de la página */
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px; /* Margen superior ajustado */
+}
+
+.col-3 {
+    background-color: #ffffff; /* Color de fondo del formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+    color: #007bff; /* Color del título */
+    font-family: 'Arial', sans-serif;
+}
+
+.form-label {
+    color: #495057; /* Color del texto de la etiqueta */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados para el campo de entrada */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo del botón principal */
+    color: #ffffff; /* Color del texto del botón principal */
+    border: 1px solid #007bff; /* Borde del botón principal */
+    border-radius: 4px; /* Bordes redondeados para el botón principal */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón sobre el botón principal */
+    border: 1px solid #0056b3; /* Cambio de borde al pasar el ratón sobre el botón principal */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Color de fondo de la alerta de error */
+    color: #721c24; /* Color del texto de la alerta de error */
+    padding: 15px;
+    margin-top: 20px; /* Margen superior ajustado para separar de otros elementos */
+    border: 1px solid #f5c6cb; /* Borde de la alerta de error */
+    border-radius: 4px; /* Bordes redondeados para la alerta de error */
+}

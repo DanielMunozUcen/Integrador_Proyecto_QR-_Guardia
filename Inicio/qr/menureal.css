@@ -1,0 +1,247 @@
+/* Estilos generales */
+
+.general{
+    background-color: white;
+    margin: 1%;
+    border-radius: 15px;
+    width: 800px;
+    height: 800px;
+    align-content: center;
+    box-shadow: 0 0 40px black; /* Agrega una sombra */
+    
+    
+}
+
+/* Estilos específicos para pantallas pequeñas (hasta 576px) */
+
+@media (max-width: 576px) {
+    .general {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: 5% auto; /* Ajusta el margen para pantallas pequeñas */
+    }
+
+    .ov-btn-slide-bottom {
+        width: 100%; /* Ajusta el ancho del botón para pantallas pequeñas */
+    }
+}
+
+/* Estilos adicionales aquí... */
+
+:root {
+    --dark-bg: rgb(255, 82, 0);
+    --light-bg: rgb(0, 38, 250);
+    --transition: all 0.5s ease;
+    --dark-trail: #D3D3D3;
+    --light-trail:#D3D3D3;
+    --icon-color: var(--dark-trail);
+}
+
+body {
+    background: var(--dark-bg);
+    transition: var(--transition);
+    &:has(:checked) {
+        background: var(--light-bg);
+    }
+}
+
+.titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  
+
+
+.sesion {
+    text-align: center;
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px; 
+    color: #333; 
+    margin-top: 50px; 
+
+  }
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botton-center {
+    text-align: center;
+  }
+  
+  button {
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+  }
+
+.cerrar{
+    position: absolute; /* Posiciona el botón de forma absoluta con respecto al contenedor */
+      top: 80%; /* Distancia desde la parte superior del contenedor */
+      left: 46%; /* Distancia desde la izquierda del contenedor */
+}
+
+
+
+
+/* Hide the input */
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.check-trail {
+    display: flex;
+    align-items: center; /* Alinear verticalmente el contenido al centro */
+    width: 6rem; /* Reducir el ancho del fondo blanco */
+    height: 3rem; /* Reducir la altura del fondo blanco */
+    padding: 0.5rem; /* Reducir el padding para reducir el tamaño del fondo blanco */
+    background: var(--dark-trail);
+    border-radius: 3rem; /* Ajustar la mitad del tamaño del fondo blanco para mantener las esquinas redondeadas */
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.check-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem; /* Reducir el ancho del manejador */
+    height: 2rem; /* Reducir la altura del manejador */
+    position: relative;
+    background: var(--dark-bg);
+    border-radius: 50%;
+    transition: var(--transition);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* Reducir la sombra para mantener un aspecto limpio */
+
+    &::before {
+        content: "A";
+        font-size: 1rem; /* Reducir el tamaño de la letra */
+        color: var(--icon-color);
+        transition: var(--transition);
+    }
+
+    &::after {
+        content: "B";
+        font-size: 1rem; /* Reducir el tamaño de la letra */
+        color: var(--icon-color);
+        transition: var(--transition);
+    }
+}
+
+input[type="checkbox"]:checked + .check-trail {
+    background: var(--light-trail);
+
+    .check-handler {
+        --icon-color: var(--light-trail);
+        margin-left: 50%;
+        background: var(--light-bg);
+
+        &::before {
+            content: "";
+        }
+
+        &::after {
+            content: "B";
+            height: 1rem; /* Reducir el tamaño de la letra en el estado marcado */
+        }
+    }
+}
+
+body:not(:has(:checked)) .check-handler {
+    --icon-color: var(--dark-trail);
+    &::before {
+        content: "A";
+    }
+
+    &::after {
+        content: "";
+    }
+}
+
+.ov-btn-slide-bottom {
+    background: rgb(255, 82, 0); /* color de fondo */
+    color: white; /* color de fuente */
+    border: 2px solid rgb(0, 38, 250); /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+  }
+  
+  .ov-btn-slide-bottom:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  
+  .ov-btn-slide-bottom::after {
+    content: "";
+    background: rgb(0, 38, 250); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  
+  .ov-btn-slide-bottom:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  
+  .logo {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de transparencia */
+}
+
+
+@media (max-width: 576px) {
+    .general {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: 5% auto; /* Ajusta el margen para pantallas pequeñas */
+    }
+
+    .ov-btn-slide-bottom {
+        width: 50%; /* Ajusta el ancho del botón para pantallas pequeñas */
+    }
+
+    .logo {
+        width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    .sesion {
+        margin-top: 20px; /* Reduce el margen en dispositivos pequeños */
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+
+    /* Otros ajustes necesarios para elementos específicos en pantallas pequeñas */
+}
